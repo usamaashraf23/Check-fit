@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <section class="w-full ">
+    <!-- <section class="w-full ">
         <header class="flex items-center h-20">
             <div class="bg-[#1F2126] w-72 flex  items-center justify-center h-full p-3">
                 <h1 class=" text-2xl text-white font-bold font-poppins">Check Fit.</h1>
@@ -50,7 +50,59 @@
                 <div class="mr-4">🛒</div>
             </div>
         </header>
+    </section> -->
+    <section class="w-full">
+    <header class="flex items-center h-20 flex-wrap md:px-0">
+        <!-- Logo -->
+        <div class="bg-[#1F2126] w-72 flex items-center justify-center h-full p-3">
+            <h1 class="text-2xl text-white font-bold font-poppins">Check Fit.</h1>
+        </div>
+
+        <!-- Menu and Cart -->
+        <div class="flex-1 flex justify-end items-center relative">
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-14 list-none mr-10 text-[#141414] font-poppins font-extralight">
+                <li class="hover:text-fuchsia-200 cursor-pointer">Home</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer">Shop All</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer">Contact</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer flex">
+                    <svg data-bbox="0 0 50 50" data-type="shape" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="25" viewBox="0 0 50 50">
+                        <g>
+                            <path d="..."></path>
+                        </g>
+                    </svg>
+                    Log in
+                </li>
+            </ul>
+
+            <!-- Cart Icon -->
+            <div class="mr-4 text-2xl cursor-pointer">🛒</div>
+
+            <!-- Hamburger for Mobile -->
+            <div class="md:hidden ml-4 text-2xl cursor-pointer" id="mobile-menu-btn">☰</div>
+
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="flex flex-col gap-4 absolute right-0 top-full mt-2 bg-white p-4 border border-gray-200 rounded shadow-md hidden">
+                <li class="hover:text-fuchsia-200 cursor-pointer">Home</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer">Shop All</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer">Contact</li>
+                <li class="hover:text-fuchsia-200 cursor-pointer flex items-center gap-1">
+                    <svg data-bbox="0 0 50 50" data-type="shape" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="25" viewBox="0 0 50 50">
+                        <g>
+                            <path d="..."></path>
+                        </g>
+                    </svg>
+                    Log in
+                </li>
+            </ul>
+
+        </div>
+    </header>
     </section>
+
     <section class="relative">
         <div class="w-full">
             <img src="./assests/hero-section-img.avif" alt=""
@@ -59,9 +111,9 @@
 
         <div class="absolute inset-0 flex items-center justify-start">
             <div class="ml-10 md:ml-80 text-white">
-                <div class="text-5xl md:text-5xl font-semibold font-poppins">Your Essentials</div>
-                <div class="text-5xl md:text-5xl font-semibold font-poppins mt-2">for a Perfect</div>
-                <div class="text-5xl md:text-5xl font-semibold font-poppins mt-2">Home Workout</div>
+                <div class="text-3xl md:text-5xl font-semibold font-poppins">Your Essentials</div>
+                <div class="text-3xl md:text-5xl font-semibold font-poppins mt-2">for a Perfect</div>
+                <div class="text-3xl md:text-5xl font-semibold font-poppins mt-2">Home Workout</div>
                 <button class="bg-[#A9977B] text-[#141414] px-10 py-2 mt-8 hover:bg-white">Shop Now</button>
             </div>
         </div>
@@ -80,19 +132,25 @@
         </div>
     </section>
 
-    <section class="flex flex-col items-center justify-center">
+    <section class="py-10">
         <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" name="fitnessImage" />
-            <button type="submit" class="bg-[#A9977B] text-[#141414] px-10 py-2 mt-8 hover:bg-[#142026] hover:text-white">Upload</button>
+            <div class="flex flex-col items-center justify-center">
+                <div>
+                    <input type="file" name="fitnessImage" />
+                </div>
+                <div>
+                    <button type="submit" class="bg-[#A9977B] text-[#141414] px-10 py-2 mt-8 hover:bg-[#142026] hover:text-white">Upload</button>
+                </div>
+            </div>
         </form>
     </section>
 
     <section class="py-10">
         <div>
-            <h1 class="text-4xl text-[#141414] font-poppins font-semibold text-center">Up to 20% off Selected Items</h1>
+            <h1 class="text-2xl text-[#141414] font-poppins font-semibold text-center md:text-4xl">Up to 20% off Selected Items</h1>
         </div>
-        <div class="flex gap-5 py-10 px-20">
-            <div class=" w-[425px]">
+        <div class="flex flex-col items-center gap-5 py-10 px-20 md:flex md:flex-row">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/gym-product.avif" class="w-[425px]">
                     <div class="py-3">
@@ -109,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/gym-product-2.avif" class="w-[425px]">
                     <div class="py-3">
@@ -126,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/gym-product-3.avif" class="w-[425px]">
                     <div class="py-3">
@@ -143,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/gym-product-4.avif" class="w-[425px]">
                     <div class="py-3">
@@ -166,8 +224,8 @@
         <div class="py-12">
             <h1 class="text-white text-center text-4xl font-semibold font-poppins">Trending Now</h1>
         </div>
-        <div class="flex gap-5 py-10 px-20">
-            <div class=" w-[425px]">
+        <div class="flex flex-col items-center gap-5 py-10 px-20 md:flex md:flex-row">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/trending-products/trending-img1.avif" class="w-[425px]">
                     <div class="py-3">
@@ -179,12 +237,12 @@
                         <p class="count text-center text-white">0</p>
                         <span class="increment p-2 cursor-pointer select-none text-white">+</span>
                     </div>
-                    <div class="border-2 border-black mt-2 hover:bg-[#141414] hover:cursor-pointer">
+                    <div class="border-2 border-white mt-2 hover:bg-[#141414] hover:cursor-pointer">
                         <p class="text-center p-2 font-poppins text-white">Add to Cart</p>
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/trending-products/trending-img2.avif" class="w-[425px]">
                     <div class="py-3">
@@ -196,12 +254,12 @@
                         <p class="count text-center text-white">0</p>
                         <span class="increment p-2 cursor-pointer select-none text-white">+</span>
                     </div>
-                    <div class="border-2 border-black mt-2 hover:bg-[#141414] hover:cursor-pointer">
+                    <div class="border-2 border-white mt-2 hover:bg-[#141414] hover:cursor-pointer">
                         <p class="text-center p-2 font-poppins text-white">Add to Cart</p>
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/trending-products/trending-img3.avif" class="w-[425px]">
                     <div class="py-3">
@@ -213,12 +271,12 @@
                         <p class="count text-center text-white">0</p>
                         <span class="increment p-2 cursor-pointer select-none text-white">+</span>
                     </div>
-                    <div class="border-2 border-black mt-2 hover:bg-[#141414] hover:cursor-pointer">
+                    <div class="border-2 border-white mt-2 hover:bg-[#141414] hover:cursor-pointer">
                         <p class="text-center p-2 font-poppins text-white">Add to Cart</p>
                     </div>
                 </div>
             </div>
-            <div class="w-[425px]">
+            <div class="md:w-[425px] w-[250px]">
                 <div>
                     <img src="./assests/products/trending-products/trending-img4.avif" class="w-[425px]">
                     <div class="py-3">
@@ -230,7 +288,7 @@
                         <p class="count text-center text-white">0</p>
                         <span class="increment p-2 cursor-pointer select-none text-white">+</span>
                     </div>
-                    <div class="border-2 border-black mt-2 hover:bg-[#141414] hover:cursor-pointer">
+                    <div class="border-2 border-white mt-2 hover:bg-[#141414] hover:cursor-pointer">
                         <p class="text-center p-2 font-poppins text-white">Add to Cart</p>
                     </div>
                 </div>
@@ -239,8 +297,8 @@
     </section>
     <section class="bg-[#A9977B] w-full">
         <div class="pt-20">
-            <h1 class="text-4xl font-poppins font-semibold text-center">The Best Equipment for</h1>
-            <h1 class="text-4xl font-poppins font-semibold text-center pt-2">Meeting Your Goals</h1>
+            <h1 class="text-2xl font-poppins font-semibold text-center md:text-4xl">The Best Equipment for</h1>
+            <h1 class="text-2xl font-poppins font-semibold text-center pt-2 md:text-4xl">Meeting Your Goals</h1>
         </div>
         <div class="text-center py-10">
             <button class="bg-[#142026] py-3 px-12 text-white font-poppins hover:bg-[#141414]">Shop All</button>
