@@ -38,3 +38,21 @@ productCards.forEach(card => {
         }
     });
 });
+
+document.getElementById("uploadForm").addEventListener("submit", function(e) {
+    // e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch("http://localhost:3000/upload", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(err => console.log(err));
+
+    // document.getElementById("fitnessImage").value = "";
+});
